@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+  <title>FoodMap</title>
+</head>
+
+<body>
+  <section class="hero is-fullheight" id="firstScreen">
+    <div class="hero-body">
+      <div class="container">
+        <img src="../assets/img/foodmap.png" alt="logo" class="container" id="logoInit">
+      </div>
+    </div>
+  </section>
+
+  <section class="column is-half is-offset-one-quarter" id="second">
+    <header class="hero">
+      <div class="container">
+        <img src="../assets/img/foodmap.png" id="logo" alt="foodmap" width="96" height="64">
+      </div>
+    </header>
+
+    <div class="container" id="searchContainer">
+      <h3>¿Qué quieres comer hoy?</h3>
+      <input type="text" id="search" placeholder="Buscar" class="input">
+      <button onclick="search()" class="button is-rounded" id="btnSearch">
+        <span class="icon">
+          <i class="fas fa-search"></i>
+        </span>
+      </button>
+      <div id="maps"></div>
+    </div>
+
+    <div class="container" id="containerInfo"></div>
+  </section>
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBc1ivg-Ft3BW5zy1VC5bdkdo89PNHPyGg&libraries=places"></script>
+  </script>
+  <script src="../public/src/js/vista/main.js"></script>
+  <script src="../public/src/js/model/map.js"></script>
+  <script src="../public/src/js/model/validate.js"></script>
+  <script src="../public/src/js/vista/splash.js"></script>
+</body>
+
+</html>

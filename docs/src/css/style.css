@@ -1,0 +1,106 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-color: #2B464F;
+  color: #FFFFFF;
+  height: auto;
+}
+#firstScreen{
+  background-color: #2B464F;
+  height: 110vh;
+  position: absolute;
+  z-index: 2;
+}
+@keyframes fadeout {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+#second{
+  min-height: 110vh;
+  width: 100vw;
+  text-align: center;
+  padding: 0%;
+}
+header{
+  background-color:#2B464F;
+  height: 15vh;
+}
+#logo{
+  margin-top: 3%;
+}
+#searchContainer{
+  padding: 5%;
+  height: inherit;
+}
+h3{
+  font-size: 20px;
+  margin: 2%;
+}
+#search{
+  text-align: center;
+  width: 83%;
+}
+#btnSearch{
+  display: inline;
+  background-color: #FFFFFF;
+}
+.icon{
+  color: #2B464F;
+}
+#maps{
+  width: auto;
+  height: 35vh;
+  margin-top: 10px;
+}
+#containerInfo{
+  height: 30vh;
+  width: auto;
+  overflow: auto;
+}
+.names{
+  font-size: 12px;
+  font-weight: 200;
+  display: inline;
+}
+#icon{
+  display: inline;
+  font-size: 12px;
+}
+.modal-button{
+  padding: 3%;
+}
+@media (min-width: 768px) {
+  #firstScreen{
+    margin: 0%;
+    width: 100%;
+    height: 110vh;
+  }
+  #logoInit{
+    width: 50%;
+    height: 40%;
+    padding: 0%;
+    margin-left: 25%;
+  }
+  #second{
+    margin: 0%;
+  }
+  #logo{
+    width: 112px;
+    height: 96px;
+    margin: 0%;
+  }
+  #searchContainer{
+    padding: 1%;
+  }
+  .modal-button{
+    padding: 1%;
+    margin: 0;
+  }
+  #icon{
+    font-size: 18px;
+  }
+}
