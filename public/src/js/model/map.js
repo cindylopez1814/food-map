@@ -69,34 +69,3 @@ function search() {
     });
   });
 }
-
-function createMarket(place) {
-  // Creamos un marcador
-  let marker = new google.maps.Marker({
-    map: map,
-    position: place.geometry.location
-  });
-
-  // Asignamos el evento click del marcador
-  google.maps.event.addListener(marker, 'click', function() {
-    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + place.vicinity + '</div>');
-    infowindow.open(map, this);
-  });
-}
-
-function createModal(place) {
-  console.log(place);
-
-  let marker = new google.maps.Marker({
-    map: map,
-    position: place.geometry.location
-  });
-
-  // Asignamos el evento click del marcador
-  google.maps.event.addListener(marker, 'click', function() {
-    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + place.formatted_address + '<br><strong>Califición: </strong>' + place.rating + '</div>');
-    infowindow.open(map, this);
-  });
-
-  containerInfo.innerHTML += '<div class="names"><p>' + place.name.toUpperCase() + '</p><span class="button modal-button" data-target="a' + place.id + '"><i class="fas fa-utensils"></i></span></div> <div id="a' + place.id + '" class="modal modal-fx-fadeInScale"><div class="modal-background"></div><div class="modal-content">' + place.name + '<p>Direccion: ' + place.formatted_address + 'p><p>Calificacion de Usuarios: ' + place.rating + '</p><button class="modal-close is-large" aria-label="close"></button></div></div>';
-}
