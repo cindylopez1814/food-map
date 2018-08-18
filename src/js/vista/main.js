@@ -1,5 +1,5 @@
 window.onload = () => {
-  setTimeout(initMap(), 5000);
+  // setTimeout(initMap(), 5000);
   validateInput();
 };
 
