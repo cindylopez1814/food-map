@@ -53,7 +53,8 @@ function search() {
     infowindow = new google.maps.InfoWindow();
 
     let service = new google.maps.places.PlacesService(map);
-    let input = document.getElementById('search').value;
+    let input = document.getElementById('searchTxt').value;
+    searchTxt.value = '';
     service.textSearch({
       location: myLatlng,
       radius: 5000,
@@ -62,10 +63,12 @@ function search() {
     }, function(results, status) {
       if (status === google.maps.places.PlacesServiceStatus.OK) {
         containerInfo.innerHTML = '';
+
         for (var i = 0; i < results.length; i++) {
           createModal(results[i]);
         }
       }
     });
   });
+
 }

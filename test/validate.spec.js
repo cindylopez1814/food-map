@@ -1,6 +1,6 @@
 const assert = require('chai').assert;
 global.window = global;
-require('public/src/js/model/validate');
+require('../public/src/js/model/validate');
 
 describe('validar input vacio', () => {
   describe('el input no debe estar vacio', () => {
@@ -8,12 +8,12 @@ describe('validar input vacio', () => {
       assert.equal(typeof validateInput, 'function');
     });
     it('input no debe estar vacio', () => {
-      assert.equal(validateInput(inputTxt.value === 'null'), false);
-      assert.equal(validateInput(inputTxt.value === ''), false);
-      assert.equal(validateCard(inputTxt.value === 'a12s'), true);
+      assert.equal(validateInput('null'), false);
+      assert.equal(validateInput(''), false);
+      assert.equal(validateInput('pan'), true);
     });
     it('desabiliatr boton campo vacio', () => {
-      assert.equal(btnAddList(inputTxt.value === ''), btnAdd.disabled = true);
+      assert.equal(validateInput(search.value === ''), btnSearch.disabled = true);
     });
   });
 });
