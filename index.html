@@ -15,8 +15,11 @@
 
 <body>
   <section id="firstScreen">
-      <div class="container-fluid">
-        <img src="assets/img/foodmap.png" alt="logo" class="container" id="logoInit">
+    <div class="container-fluid">
+      <img src="assets/img/foodmap.png" alt="logo" class="container" id="logoInit">
+    </div>
+    <div class="contLoad">
+      <img src="assets/img/loader.gif" alt="gift" id="giftLoad">
     </div>
   </section>
 
@@ -27,11 +30,11 @@
       </div>
     </header>
 
-    <div  id="searchContainer">
+    <div id="searchContainer">
       <h3>¿Qué quieres comer hoy?</h3>
       <input type="text" id="searchTxt" placeholder="Buscar" class="input">
       <button onclick="search()" class="btn" id="btnSearch">
-          <i class="fas fa-search"></i>
+        <i class="fas fa-search"></i>
       </button>
       <div id="maps"></div>
     </div>

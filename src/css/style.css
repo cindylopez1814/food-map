@@ -58,7 +58,12 @@ h3{
   width: 15%;
   border-radius: 0%;
 }
-
+#giftLoad{
+  width: 100%;
+}
+.contLoad{
+  padding: 25% 40%;
+}
 #maps{
   width: auto;
   height: 35vh;
@@ -73,7 +78,8 @@ h3{
   border-radius: 0%;
   font-size: 12px;
   color: #fff;
-  background: rgb(72, 103, 114);
+  background: #EE4100;
+  opacity: 0.8;
   padding: 2%;
   width: 85%;
 }
@@ -93,6 +99,9 @@ hr{
 }
 
 @media (min-width: 768px) {
+  .contLoad{
+    display: none;
+  }
   #firstScreen{
     margin: 0%;
     width: 100%;
